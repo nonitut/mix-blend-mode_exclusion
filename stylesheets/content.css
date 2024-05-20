@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    position: relative;
+    width: 100%;
+    height: 400vh;
+    overflow: hidden; /* чтобы скрыть вертикальную прокрутку */
+  }
+  
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 30%;
+    mix-blend-mode: exclusion;
+    overflow-y: scroll; 
+    z-index: 2; /* чтобы текст находился над изображением */
+    color: white;
+  }
+  
+  h1, p {
+    font-size: 4vw;
+    margin: 10px 0;
+  }
+  
+  .cat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* чтобы изображение находилось под текстом */
+  }
+  
